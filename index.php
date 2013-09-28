@@ -16,20 +16,13 @@
 
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 			<script type="text/javascript" src="assets/js/control_panel.js"></script>
-<<<<<<< HEAD
+
+
 
 			<script type="text/javascript" src="assets/js/songview.js"></script>
-
-			<script type="text/javascript" src="assets/js/scrollview.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 			<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css" media="all" />
 
-=======
-			<script type="text/javascript" src="assets/js/songview.js"></script>
-			<script type="text/javascript" src="assets/js/songview.js"></script>
-			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-			<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css" media="all" />
->>>>>>> f48fc0e5ca5d6e1a1ec85cd03f89b4b11dda2c18
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
