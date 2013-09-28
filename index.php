@@ -27,6 +27,21 @@
 
     <div class="container">
 
+	<div id="control_panel">
+	<?php
+	
+	include 'functions/control_panel.php';
+	
+	?>
+	</div>
+	
+	<div id="songview">
+	<?php
+	include 'functions/songview.php';
+	
+	?>
+	</div>
+	
 	
 	</div>
 	
