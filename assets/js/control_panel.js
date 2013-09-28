@@ -53,7 +53,7 @@ function callEchoNest(website)
         success: function(response, textStatus, jqXHR)
 		{
 		console.log(response);
-
+		populateWindow(response);
         },
         // callback handler that will be called on error
         error: function(jqXHR, textStatus, errorThrown){
