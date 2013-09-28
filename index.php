@@ -10,6 +10,8 @@
     <!-- Le styles -->
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">
     <link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/control_panel.css" rel="stylesheet">
+	<link href="assets/css/songview.css" rel="stylesheet">
 
 
 
