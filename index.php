@@ -16,7 +16,7 @@
 
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 			<script type="text/javascript" src="assets/js/control_panel.js"></script>
-			<script type="text/javascript" src="assets/js/scrollview.js"></script>
+			<script type="text/javascript" src="assets/js/songview.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
