@@ -9,10 +9,10 @@ body { }
 
 html
 {
-/*
-background: url('images/background/blur.png') no-repeat ;
+
+background: url('images/background/blur.png') no-repeat center center fixed;
 background-size: 100% auto;
-*/
+
 }
 
 #control_panel

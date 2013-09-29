@@ -79,7 +79,7 @@ function constructQuery()
 	
 	var energy = $('#slider_energy').slider("option", "value");
 	energy = energy / 100;
-	console.log(energy);
+	//console.log(energy);
 	
 	var speach = $('#slider_speach').slider("option", "value");
 	speach = speach / 100;
@@ -89,15 +89,23 @@ function constructQuery()
 
 	//song_min_hotttnesss = '&song_min_hotttnesss=0.5'
 
+	var artistStartYear = '&artist_start_year_after=2005';
+
+	var styleArray = ['electronic', 'rock', 'folk', 'indie'];
+
+	var randomNumber2 = Math.floor(Math.random()*styleArray.length);
+
+	var style = '&style=' + styleArray[randomNumber2];
+
 	var sortArray = ["tempo-asc","artist_hotttnesss-asc","tempo-desc","liveness-desc","artist_hotttnesss-desc","song_hotttnesss-desc","energy-desc"];
 	
 	var randomNumber = Math.floor(Math.random()*sortArray.length);
 
 	var sort = '&sort=' + sortArray[randomNumber];
 
-	var queryString = site + results + min_energy + mood + speach + sort;
+	var queryString = site + results + min_energy + mood + speach + artistStartYear + style + sort;
 	
-	console.log(queryString);
+	//console.log(queryString);
 	//alert(queryString);
 	
 	callEchoNest(queryString);
@@ -115,7 +123,7 @@ function callEchoNest(website)
         success: function(response, textStatus, jqXHR)
 		{
 		response = $.parseJSON(response);
-		console.log(response);
+		//console.log(response);
 		generatePlaylist(response);
 		
 		},
@@ -161,7 +169,7 @@ function generatePlaylist(response)
 	    success: function(response, textStatus, jqXHR)
 		{
 		response = $.parseJSON(response);
-			console.log(response);
+			//console.log(response);
 			populateWindow(response);
 		},
 	    // callback handler that will be called on error
