@@ -54,7 +54,6 @@
 	
 	?>
 	</div>
-<<<<<<< HEAD
 
 	<div id="player">
 		<?php
@@ -62,8 +61,6 @@
 		?>	
 	</div>
 
-=======
->>>>>>> db56225ef47499bd84447ab80b06256dbf6f1bb1
 	</div>
 	
   </body>
