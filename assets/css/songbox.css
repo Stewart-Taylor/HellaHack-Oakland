@@ -1,14 +1,14 @@
 .block_song_container_1
 {
-  width:  150px;
-  height: 150px;
+  width:  205px;
+  height: 205px;
    background: #000000;
    background-image:url('images/default_song.png');
   border: 2px solid #333;
   border-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 5px;
   margin:2px;
-  background-size:150px 150px;
+  background-size:205px 205px;
 background-repeat:no-repeat;
 }
 
@@ -16,15 +16,15 @@ background-repeat:no-repeat;
 
 .block_song_container_2
 {
-  width:  170px;
-  height: 170px;
+  width:  190px;
+  height: 190px;
   background: #000000;
   border: 2px solid #333;
   border-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 5px;
   margin:2px;
   
-  background-size:170px 170px;
+  background-size:190px 190px;
   background-repeat:no-repeat;
 }
 
@@ -265,7 +265,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .artist_venue
 {
 margin:5px;
-
+font-size:20px;
+font-weight:bold;
 }
 
 .concert_date
@@ -277,15 +278,14 @@ margin:5px;
 .concert_city
 {
 margin:5px;
-
 }
 
 .songkickLink
 {
 position:relative;
-position-top:40px;
- float:right;
-
+top:-40px;
+float:right;
+right:10px;
 }
 
 .songkickLink:hover

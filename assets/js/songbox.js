@@ -86,9 +86,12 @@ function getItemElement( title, artist, imageLink, audioLink , songData) {
   console.log("sup");
   songData = JSON.parse(songData);
   console.log(songData);
-  
-  var backItem = '<div class="playing_at">' + "Playing at: " + songData.venue  + "</div>";
-  backItem += '<div class="concert_date">' +  songData.date   + "</div>";
+ 
+
+var soundDate = songData.date ;
+ 
+  var backItem = '<div class="playing_at">' + 'Playing at: <div class="artist_venue" >' + songData.venue  + "</div></div>";
+ // backItem += '<div class="concert_date">' +  soundDate  + "</div>";
     backItem += '<div class="concert_city">' +  songData.city   + "</div>";
 	backItem += '<a class="songkickLink" target="_blank" href="' + songData.link + '" >' +  '<img src="assets/images/songkick.png" width="20" height="20" >' + "</a>";
   
