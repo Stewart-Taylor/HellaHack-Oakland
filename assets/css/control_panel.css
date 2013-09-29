@@ -89,6 +89,7 @@ margin-left:4px;
 margin:0 auto;
 overflow: hidden;
 height:50px;
+
 }
 
 .mood_emoteBox
@@ -101,6 +102,8 @@ margin-right:10px;
 margin-left:10px;
 border-radius:5px;
 box-shadow: 5px 3px 8px #888888;
+
+
 }
 
 .cp_box
@@ -120,6 +123,7 @@ height:100px;
 {
 height:80px;
 width:200px;
+
 }
 
 #speech_box

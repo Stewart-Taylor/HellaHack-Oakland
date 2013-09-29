@@ -1,6 +1,6 @@
 
 
-function addSongBox(title, artist,audioLink,imageLink)
+function addSongBox(title, artist,audioLink,imageLink, songData)
 {
 
    
@@ -29,7 +29,7 @@ function addSongBox(title, artist,audioLink,imageLink)
   
     var fragment = document.createDocumentFragment();
 
-       var elem = getItemElement(title,artist,imageLink, audioLink);
+       var elem = getItemElement(title,artist,imageLink, audioLink ,songData);
       fragment.appendChild( elem );
       masonry_elms.push( elem );
 
@@ -51,7 +51,7 @@ function addSongBox(title, artist,audioLink,imageLink)
 }
 
 
-function getItemElement( title, artist, imageLink, audioLink) {
+function getItemElement( title, artist, imageLink, audioLink , songData) {
   var elem = document.createElement('div');
   
   var n = Math.random();
@@ -83,8 +83,14 @@ function getItemElement( title, artist, imageLink, audioLink) {
   
   $(elem).append( '<div class="block_song_artist">' + artist + '</div>' );
   
+  console.log("sup");
+  songData = JSON.parse(songData);
+  console.log(songData);
   
-  var backItem = "<p>Text</p><h1>more</h1>";
+  var backItem = '<div class="playing_at">' + "Playing at: " + songData.venue  + "</div>";
+  backItem += '<div class="concert_date">' +  songData.date   + "</div>";
+    backItem += '<div class="concert_city">' +  songData.city   + "</div>";
+	backItem += '<a class="songkickLink" target="_blank" href="' + songData.link + '" >' +  '<img src="assets/images/songkick.png" width="20" height="20" >' + "</a>";
   
   $(elem).append('<div class="flip-container" onclick="this.classList.toggle("hover");>' +  ' <div class="flipper">  <div class="front"> </div><div class="back">' +  backItem +  '</div></div> </div>');
   

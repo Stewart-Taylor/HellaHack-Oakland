@@ -239,9 +239,62 @@ border-top:1px solid #D6D6C2;
   -o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 
-	background: #f8f8f8;
+
+font-weight: bold;
+background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	color:#FFFFFF;
+	font-family: Arial,sans-serif;
 	height:100%;
+	
 }
+
+.playing_at
+{
+	color:#FFFFFF;
+	font-family: Arial,sans-serif;
+	margin:5px;
+}
+
+.artist_venue
+{
+margin:5px;
+
+}
+
+.concert_date
+{
+margin:5px;
+
+}
+
+.concert_city
+{
+margin:5px;
+
+}
+
+.songkickLink
+{
+position:relative;
+position-top:40px;
+ float:right;
+
+}
+
+.songkickLink:hover
+{
+background-color:#f24537;
+border: 1px solid #d02718;
+
+}
+
 
 
 
