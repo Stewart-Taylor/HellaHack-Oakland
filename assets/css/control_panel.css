@@ -22,7 +22,8 @@ opacity: 0.8;
 #logo_box
 {
 float:left;
-
+margin-top:30px;
+margin-right:80px;
 }
 
 
@@ -33,6 +34,7 @@ height:100px;
 background-color:#CCCCB2;
 float:left;
 margin-right:4px;
+margin-left:4px;
 
 
 }
@@ -112,7 +114,6 @@ margin-right:20px;
 #mood_box
 {
 height:100px;
-
 }
 
 #energy_box
@@ -130,13 +131,14 @@ width:200px;
 
 .slider_contatiner
 {
+margin-top:10px;
   padding:5px;
 }
 
 
 #cp_button
 {
-margin-top:50px;
+margin-top:30px;
 margin-left:70px;
 }
 
@@ -145,10 +147,11 @@ margin-left:70px;
 /*text-shadow: 1px 1px #A0A0A0 ;*/
 padding:4px;
 margin-bottom:5px;
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "League Gothic", Impact, sans-serif;
 font-size: 22px;
 line-height: 20px;
-color: #333333;
+color: #FFFFFF;
+
 }
 
 .construct_button {
@@ -159,29 +162,29 @@ color: #333333;
 	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
 	background-color:#f24537;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topleft:0px;
-	border-top-left-radius:0px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
-	border-top-right-radius:0px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	border-bottom-left-radius:0px;
+	-webkit-border-top-left-radius:31px;
+	-moz-border-radius-topleft:31px;
+	border-top-left-radius:31px;
+	-webkit-border-top-right-radius:31px;
+	-moz-border-radius-topright:31px;
+	border-top-right-radius:31px;
+	-webkit-border-bottom-right-radius:31px;
+	-moz-border-radius-bottomright:31px;
+	border-bottom-right-radius:31px;
+	-webkit-border-bottom-left-radius:31px;
+	-moz-border-radius-bottomleft:31px;
+	border-bottom-left-radius:31px;
 	text-indent:0;
 	border:1px solid #d02718;
 	display:inline-block;
 	color:#ffffff;
 	font-family:Verdana;
-	font-size:15px;
+	font-size:29px;
 	font-weight:bold;
 	font-style:normal;
-	height:40px;
-	line-height:40px;
-	width:100px;
+	height:37px;
+	line-height:37px;
+	width:37px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #810e05;
@@ -191,6 +194,7 @@ color: #333333;
 	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
 	background-color:#c62d1f;
+	cursor: pointer; cursor: hand; 
 }.construct_button:active {
 	position:relative;
 	top:1px;

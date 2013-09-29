@@ -13,14 +13,14 @@
 
 
 <div id="logo_box">
-<h1>Title</h1>
+<img src="assets/images/logo.png" >
 </div>
 
-<div class="panel_divider"></div>
+
 
 <div id="mood_box" class="cp_box">
 
-<div class="cp_box_title"> <img src="assets/images/Mood.png"> </div>
+<div class="cp_box_title"> Mood </div>
 
 <div id="mood_icon_box">
 
@@ -32,11 +32,11 @@
 
 </div>
 
-<div class="panel_divider"></div>
+
 
 <div id="energy_box" class="cp_box">
 
-<div class="cp_box_title"> <img src="assets/images/Energy.png"></div>
+<div class="cp_box_title"> Energy</div>
 
 
   <script>
@@ -73,19 +73,18 @@
 </div>
 
 
-<div class="panel_divider"></div>
+
 
 <div id="speech_box"class="cp_box">
 
-<div class="cp_box_title"> <img src="assets/images/Speech.png"></div>
+<div class="cp_box_title"> Speech</div>
 
   <div class="slider_contatiner">
 <div id="slider_speach"></div>
 </div>
 </div>
 
-<div class="panel_divider"></div>
 
-<button type="button" id="cp_button" class="construct_button">Construct Query</button>
+<button type="button" id="cp_button" class="construct_button">R</button>
 
 </div>
