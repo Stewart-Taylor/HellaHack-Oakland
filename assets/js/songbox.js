@@ -23,9 +23,9 @@ function addSongBox(title, artist,audioLink,imageLink)
   
   //console.log(masonry_elms);
   //console.log("msnry" + msnry);
-   title = "Sweet Nothing";
-   artist = "calvin harris";
-   imageLink = "http://www.josepvinaixa.com/blog/wp-content/uploads/2013/04/Calvin-Harris-I-Need-Your-Love-2013-1200x1200-Final-Version.png";
+   //title = "Sweet Nothing";
+  // artist = "calvin harris";
+  // imageLink = "http://www.josepvinaixa.com/blog/wp-content/uploads/2013/04/Calvin-Harris-I-Need-Your-Love-2013-1200x1200-Final-Version.png";
   
     var fragment = document.createDocumentFragment();
 
