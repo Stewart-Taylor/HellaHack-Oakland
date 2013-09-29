@@ -16,9 +16,10 @@
 
 <div id="mood_icon_box">
 
-<div id="mood_happy" class="mood_emoteBox"> Happy</div>
-<div id="mood_sad" class="mood_emoteBox"> Sad</div>
-<div id="mood_angry" class="mood_emoteBox"> Angry</div>
+
+<a href="#" class="mood_button">:)</a>
+<a href="#" class="mood_button">:|</a>
+<a href="#" class="mood_button">:(</a>
 </div>
 
 </div>
@@ -32,26 +33,25 @@
   $(function() {
     // setup master volume
     $( "#slider_energy" ).slider({
-      value: 100,
+      value: 50,
       orientation: "horizontal",
       range: "min",
       animate: true
     });
-    // setup graphic EQ
-    $( "#eq > span" ).each(function() {
-      // read initial values from markup and remove that
-      var value = parseInt( $( this ).text(), 10 );
-      $( this ).empty().slider({
-        value: value,
-        range: "min",
-        animate: true,
-        orientation: "vertical"
-      });
+	
+	    $( "#slider_speach" ).slider({
+      value: 50,
+      orientation: "horizontal",
+      range: "min",
+      animate: true
     });
   });
   </script>
   
+  <div class="slider_contatiner">
 <div id="slider_energy"></div>
+</div>
+
 
 </div>
 
@@ -59,6 +59,10 @@
 <div id="speech_box"class="cp_box">
 
 <div class="cp_box_title"> Speech</div>
+
+  <div class="slider_contatiner">
+<div id="slider_speach"></div>
+</div>
 </div>
 
 <button type="button" id="cp_button" class="construct_button">Construct Query</button>

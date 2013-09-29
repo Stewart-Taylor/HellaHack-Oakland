@@ -43,14 +43,17 @@
 	?>
 	</div>
 	
-	<div id="songview">
+
+	</div>
+	
+	<div id ="songviewCont">
+	
+		<div id="songview">
 	<?php
 	include 'functions/songview.php';
 	
 	?>
 	</div>
-	
-	
 	</div>
 	
   </body>
