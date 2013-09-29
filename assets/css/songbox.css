@@ -59,7 +59,7 @@ color:#FFFFFF;
 text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 
-.block_song_artist
+.block_song_artist:hover
 {
 background: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */

@@ -70,7 +70,7 @@ function constructQuery()
 	var site = 'http://developer.echonest.com/api/v4/song/search?api_key=F7R69ENQKKOFBKMBP&format=json';
 	
 	
-	var results = '&results=' + 10;
+	var results = '&results=' + 30;
 	
 	var mood = "&mood=" + moodState;
 	
@@ -83,7 +83,7 @@ function constructQuery()
 	
 	var speach = $('#slider_speach').slider("option", "value");
 	speach = speach / 100;
-	speach = '&min_speechiness=' + speach
+	speach = '&max_speechiness=' + speach
 	
 	min_energy = '&min_energy=' + energy;
 
@@ -148,7 +148,7 @@ function generatePlaylist(response)
 	
 	var format = '&format=json';
 
-	var results = '&results=10';
+	var results = '&results=30';
 
 	var type = '&type=song-radio';
 
