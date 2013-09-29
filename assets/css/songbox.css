@@ -296,7 +296,20 @@ border: 1px solid #d02718;
 }
 
 
+.song_email
+{
+position:relative;
+top:-80px;
+right:-10px;
+float:right;
 
+}
+
+.song_email:hover
+{
+background-color:#f24537;
+border: 1px solid #d02718;
+}
 
 
 

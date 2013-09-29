@@ -51,7 +51,7 @@ function addSongBox(title, artist,audioLink,imageLink, songData)
 }
 
 
-function getItemElement( title, artist, imageLink, audioLink , songData) {
+function getItemElement( title, artist, imageLink, audioLink, songData) {
   var elem = document.createElement('div');
   
   var n = Math.random();
@@ -94,12 +94,15 @@ var soundDate = songData.date ;
  // backItem += '<div class="concert_date">' +  soundDate  + "</div>";
     backItem += '<div class="concert_city">' +  songData.city   + "</div>";
 	backItem += '<a class="songkickLink" target="_blank" href="' + songData.link + '" >' +  '<img src="assets/images/songkick.png" width="20" height="20" >' + "</a>";
+	backItem += '<div class="song_email"  >' +  '<img src="assets/images/mail.jpg" width="20" height="20" >' + "</div>";
   
   $(elem).append('<div class="flip-container" onclick="this.classList.toggle("hover");>' +  ' <div class="flipper">  <div class="front"> </div><div class="back">' +  backItem +  '</div></div> </div>');
   
   
-  
-  
+$('.song_email').on("click", function() {
+sendEmail(songData,title,artist);
+
+})
 
   $(elem).on("click", function() {
       var source = document.getElementById("audioSource");
@@ -114,6 +117,7 @@ var soundDate = songData.date ;
   $(elem).children('.block_song_title').css('visibility', 'hidden');
   $(elem).css('cursor', 'hand');
   $(elem).css('cursor', 'pointer');
+  
   
   $(elem).mouseover(function()
   {
@@ -141,4 +145,47 @@ var soundDate = songData.date ;
   
   return elem;
 }
+
+
+function sendEmail(song , title , artist){
+
+var base = 'http://sendgrid.com/api/mail.send.json?toname=Paul&from=Reccy%40reccy.com&api_user=iwozzy&api_key=hellareccy';
+
+var subject = '&subject=Reccy:%20' + encodeURIComponent(title);
+var body = '&text=You%20favourited%20this%20song%20on%20reccy' + + String.fromCharCode(13) + encodeURIComponent(artist); 
+
+var email = '&to=' + 'wozniak.paull%40gmail.com';
+
+ //sendgrid.com/api/mail.send.json?to=wozniak.paull%40gmail.com&toname=Paul&from=lol%40reccy.com&subject=Hey&text=what%20up%20dawg&api_user=iwozzy&api_key=hellareccy
+
+ 
+ 
+ var emailURL = base + email + subject + body;
+ 
+ 
+ //emailURL = encodeURIComponent(emailURL);
+ 
+ console.log(emailURL);
+ 
+ 
+ $.ajax({
+  url: emailURL,
+  context: document.body
+}).done(function() {
+ // $( this ).addClass( "done" );
+});
+
+
+}
+
+/*
+$(document).ready(function() {
+   $('.song_email').click(function(){
+   console.log("Ere");
+   // sendEmail(songData, title , artist);
+});
+});
+*/
+
+
 
