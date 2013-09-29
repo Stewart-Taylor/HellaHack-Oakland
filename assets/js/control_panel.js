@@ -78,7 +78,7 @@ function callEchoNest(website)
         success: function(response, textStatus, jqXHR)
 		{
 		console.log(response);
-		//populateWindow(response);
+		populateWindow(response);
 		console.log(response.response.songs);
         },
         // callback handler that will be called on error
