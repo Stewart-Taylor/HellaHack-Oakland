@@ -3,11 +3,32 @@
 
 var moodState = "happy";
 
+
+$( document ).ready(function() {
+$( "#slider_energy" ).slider({
+  stop: function( event, ui ) 
+  {
+ // alert("test");
+ constructQuery();
+  }
+});
+
+
+$( "#slider_speach" ).slider({
+  stop: function( event, ui ) 
+  {
+ // alert("test");
+ constructQuery();
+  }
+});
+
+});
+
+
+
 $(function() {
       $("#cp_button").click( function()
            {
-		  
-		      addSongBox("Calvin Harris" , "Sweet Nothing" , "something.com/test.mp3" , "http://www.songslover.pk/tracks/images/Sweet_Nothing.jpg");
 		  
 		  
              constructQuery();
@@ -19,6 +40,7 @@ $(function() {
       $("#mood_happy_button").click( function()
            {
 		   moodState = "happy";
+		   constructQuery();
            }
       );
 });
@@ -27,6 +49,7 @@ $(function() {
       $("#mood_neutral_button").click( function()
            {
 		   moodState="neutral";
+		   constructQuery();
            }
       );
 });
@@ -35,6 +58,7 @@ $(function() {
       $("#mood_sad_button").click( function()
            {
 		   moodState="sad";
+		   constructQuery();
            }
       );
 });
@@ -79,13 +103,14 @@ function constructQuery()
 
 function callEchoNest(website)
 {
-
+	
 		   $.ajax({
-        url: website,
+        url: "functions/proxy.php?url=" + encodeURIComponent(website),
         type: "get",
         // callback handler that will be called on success
         success: function(response, textStatus, jqXHR)
 		{
+		response = $.parseJSON(response);
 		console.log(response);
 		generatePlaylist(response);
 		

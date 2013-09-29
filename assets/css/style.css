@@ -4,12 +4,15 @@ margin:0px;
 padding:0px;
 overflow:hidden;
 }
-body {}
+body { }
 
 
 html
 {
-
+/*
+background: url('images/background/blur.png') no-repeat ;
+background-size: 100% auto;
+*/
 }
 
 #control_panel
@@ -28,5 +31,6 @@ height:200px;
 
 #songviewCont
 {
+
  margin:40px;
 }

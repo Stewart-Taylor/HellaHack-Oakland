@@ -36,6 +36,8 @@
   </head>
 
   <body>
+  
+  
 
     <div class="container">
 
@@ -80,6 +82,9 @@
 			console.log(msnry);
 			
 
+			
+    
+</script>
 			
 			</script>
 				<script type="text/javascript" src="assets/js/songbox.js"></script>
