@@ -19,7 +19,7 @@
 
 <div id="mood_box" class="cp_box">
 
-<div class="cp_box_title"> Mood</div>
+<div class="cp_box_title"> <img src="assets/images/Mood.png"> </div>
 
 <div id="mood_icon_box">
 
@@ -35,7 +35,7 @@
 
 <div id="energy_box" class="cp_box">
 
-<div class="cp_box_title"> Energy</div>
+<div class="cp_box_title"> <img src="assets/images/Energy.png"></div>
 
 
   <script>
@@ -76,7 +76,7 @@
 
 <div id="speech_box"class="cp_box">
 
-<div class="cp_box_title"> Speech</div>
+<div class="cp_box_title"> <img src="assets/images/Speech.png"></div>
 
   <div class="slider_contatiner">
 <div id="slider_speach"></div>
