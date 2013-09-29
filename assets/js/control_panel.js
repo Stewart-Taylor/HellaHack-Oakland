@@ -1,13 +1,14 @@
 
 
 
-
-
 var moodState = "happy";
 
 $(function() {
       $("#cp_button").click( function()
            {
+		  
+		      addSongBox("Calvin Harris" , "Sweet Nothing" , "something.com/test.mp3" , "http://www.songslover.pk/tracks/images/Sweet_Nothing.jpg");
+		  
 		  
              constructQuery();
            }
@@ -78,9 +79,10 @@ function callEchoNest(website)
         success: function(response, textStatus, jqXHR)
 		{
 		console.log(response);
-		populateWindow(response);
+		//populateWindow(response);
 		console.log(response.response.songs);
-        },
+		
+		},
         // callback handler that will be called on error
         error: function(jqXHR, textStatus, errorThrown){
             // log the error to the console

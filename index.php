@@ -12,6 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
 	<link href="assets/css/control_panel.css" rel="stylesheet">
 	<link href="assets/css/songview.css" rel="stylesheet">
+	<link href="assets/css/songbox.css" rel="stylesheet">
 
 
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -22,7 +23,11 @@
 			<script type="text/javascript" src="assets/js/songview.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 			<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css" media="all" />
+			<script src="assets/js/masonry.pkgd.min.js"></script>
 
+		
+			
+			
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -56,11 +61,25 @@
 
 	<div id="player">
 		<?php
-		include 'functions/player.php';
+		// include 'functions/player.php';
 		?>	
 	</div>
 
 	</div>
 	
+		<script type="text/javascript" >
+			
+	        var masonry_elms = [];
+			var container = document.querySelector('.js-masonry');
+			console.log(container);
+			var msnry = new Masonry( container, {
+			  columnWidth: 60
+			});
+		
+
+			
+			</script>
+				<script type="text/javascript" src="assets/js/songbox.js"></script>
   </body>
+  
 </html>
