@@ -1,4 +1,4 @@
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
   <script src="assets/js/jquery.rdio.js"></script>
   <script type="text/javascript">
     var duration = 1; // track the duration of the currently playing track
