@@ -66,8 +66,100 @@ function parse7Digital(response)
 		//console.log(track.preview_url);
 		//console.log(track.release_image);
 
-		addSongBox(songs.title,songs.artist_name,track.preview_url,track.release_image);
+		getArtistSongKickID(songs.artist_name, function(songKickID){
+			getArtistEvents(songKickID, function(eventJSONObject){
+				console.log(eventJSONObject);
+				addSongBox(songs.title,songs.artist_name,track.preview_url,track.release_image,eventJSONObject);
+			});
+
+		});
+
 	}
 	
 	//console.log("--FINISH--");
+}
+
+function getArtistSongKickID(artist_name, callback)
+{
+	var base = 'http://api.songkick.com/api/3.0/search/artists.json?query=';
+	var search = artist_name
+	var api = '&apikey=qnqepvaYb1LXkz0T'
+
+	var queryString = base + search + api;
+
+	var songKickID;
+
+	$.ajax({
+        url: queryString,
+        type: "get",
+        // callback handler that will be called on success
+        success: function(response, textStatus, jqXHR)
+		{
+			songKickID = response.resultsPage.results.artist[0].id;
+			callback(songKickID);
+
+        },
+        // callback handler that will be called on error
+        error: function(jqXHR, textStatus, errorThrown){
+            // log the error to the console
+            console.log(
+                "The following error occured: "+
+                textStatus, errorThrown
+            );
+        },
+        // callback handler that will be called on completion
+        // which means, either on success or error
+        complete: function()
+		{
+            // enable the inputs
+         //   $inputs.removeAttr("disabled");
+        }
+    });
+
+
+}
+
+function getArtistEvents(artist_id,callback)
+{
+	var base = 'http://api.songkick.com/api/3.0/artists/';
+	var artist = artist_id;
+	var rest = '/calendar.json?apikey=qnqepvaYb1LXkz0T';
+
+	var queryString = base + artist + rest;
+
+	var eventObject = new Object();
+	var eventJSONObject;
+
+	$.ajax({
+        url: queryString,
+        type: "get",
+        // callback handler that will be called on success
+        success: function(response, textStatus, jqXHR)
+		{
+			eventObject.displayName = response.resultsPage.results.event[0].displayName;
+			eventObject.date = response.resultsPage.results.event[0].start.date;
+			eventObject.city = response.resultsPage.results.event[0].location.city;
+			eventObject.venue = response.resultsPage.results.event[0].venue.displayName;
+			eventObject.link = response.resultsPage.results.event[0].uri;
+
+			eventJSONObject = JSON.stringify(eventObject);
+
+			callback(eventJSONObject);
+
+        },
+        // callback handler that will be called on error
+        error: function(jqXHR, textStatus, errorThrown){
+            // log the error to the console
+            console.log(
+                "The following error occured: "+
+                textStatus, errorThrown
+            );
+        },
+        // callback handler that will be called on completion
+        // which means, either on success or error
+        complete: function()
+		{
+ 			console.log(eventJSONObject);
+        }
+    });
 }
