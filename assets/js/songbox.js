@@ -56,22 +56,41 @@ function getItemElement( title, artist, imageLink, audioLink) {
   
   var n = Math.random();
   
-  elem.className = 'block_song_container';
-  if(n < 0.3)
+  elem.className = 'block_song_container_10';
+  if(n < 0.1)
   {
-  elem.className = 'block_song_container_small';
+  elem.className = 'block_song_container_1';
   }
+   else if(n < 0.2)
+  {
+  elem.className = 'block_song_container_2';
+  }
+     else if(n < 0.3)
+  {
+  elem.className = 'block_song_container_3';
+  }
+     else if(n < 0.4)
+  {
+  elem.className = 'block_song_container_4';
+  }
+ 
+
   
-    if(n > 0.8)
-  {
-  elem.className = 'block_song_container_big';
-  }
   
   $(elem).css("background-image", "url(" + imageLink + ")");  
   
-  $(elem).append( '<div class="block_song_title">' +  title + '</p>' );
+  $(elem).append( '<div class="block_song_title">' +  title + '</div>' );
   
-  $(elem).append( '<div class="block_song_artist">' + artist + '</p>' );
+  $(elem).append( '<div class="block_song_artist">' + artist + '</div>' );
+  
+  
+  var backItem = "<p>Text</p><h1>more</h1>";
+  
+  $(elem).append('<div class="flip-container" onclick="this.classList.toggle("hover");>' +  ' <div class="flipper">  <div class="front"> </div><div class="back">' +  backItem +  '</div></div> </div>');
+  
+  
+  
+  
 
   $(elem).on("click", function() {
       var source = document.getElementById("audioSource");
