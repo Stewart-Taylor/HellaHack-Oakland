@@ -82,5 +82,35 @@ function getItemElement( title, artist, imageLink, audioLink) {
       
   })
   
+  $(elem).children('.block_song_artist').css('visibility', 'hidden');
+  $(elem).children('.block_song_title').css('visibility', 'hidden');
+  $(elem).css('cursor', 'hand');
+  $(elem).css('cursor', 'pointer');
+  
+  $(elem).mouseover(function()
+  {
+		$(elem).children('.block_song_artist').css('visibility', 'visible');
+		$(elem).css('cursor', 'hand');
+  });
+  
+    $(elem).mouseleave(function()
+  {
+		$(elem).children('.block_song_artist').css('visibility', 'hidden');
+		$(elem).css('cursor', 'pointer');
+  });
+  
+    $(elem).mouseover(function()
+  {
+		$(elem).children('.block_song_title').css('visibility', 'visible');
+		$(elem).css('cursor', 'hand');
+  });
+  
+    $(elem).mouseleave(function()
+  {
+		$(elem).children('.block_song_title').css('visibility', 'hidden');
+		$(elem).css('cursor', 'pointer');
+  });
+  
   return elem;
 }
+
