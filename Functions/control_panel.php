@@ -17,9 +17,9 @@
 <div id="mood_icon_box">
 
 
-<a href="#" class="mood_button">:)</a>
-<a href="#" class="mood_button">:|</a>
-<a href="#" class="mood_button">:(</a>
+<a href="#" id="mood_happy_button" class="mood_button">:)</a>
+<a href="#" id="mood_neutral_button" class="mood_button">:|</a>
+<a href="#" id="mood_sad_button" class="mood_button">:(</a>
 </div>
 
 </div>

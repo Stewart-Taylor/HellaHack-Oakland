@@ -3,10 +3,37 @@
 
 
 
+var moodState = "happy";
+
 $(function() {
       $("#cp_button").click( function()
            {
+		  
              constructQuery();
+           }
+      );
+});
+
+$(function() {
+      $("#mood_happy_button").click( function()
+           {
+		   moodState = "happy";
+           }
+      );
+});
+
+$(function() {
+      $("#mood_neutral_button").click( function()
+           {
+		   moodState="neutral";
+           }
+      );
+});
+
+$(function() {
+      $("#mood_sad_button").click( function()
+           {
+		   moodState="sad";
            }
       );
 });
@@ -20,7 +47,7 @@ function constructQuery()
 	
 	var results = '&results=' + 10;
 	
-	var mood = "happy";
+	var mood = "&mood=" + moodState;
 	
 	var artistFame = "&artist_min_familiarity=" + Math.random();
 	var live = "&min_liveness=" + Math.random();
@@ -29,11 +56,10 @@ function constructQuery()
 	energy = energy / 100;
 	console.log(energy);
 	
-	mood = '&mood=happy';
 	min_energy = '&min_energy=' + energy;
 	
 
-	var queryString = site + results + mood + min_energy + artistFame;
+	var queryString = site + results + min_energy + artistFame + mood;
 	
 	console.log(queryString);
 	//alert(queryString);
