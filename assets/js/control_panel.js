@@ -58,15 +58,23 @@ function constructQuery()
 	console.log(energy);
 	
 	min_energy = '&min_energy=' + energy;
-	
 
-	var queryString = site + results + min_energy + artistFame + mood;
+	//song_min_hotttnesss = '&song_min_hotttnesss=0.5'
+
+	var sortArray = ["tempo-asc","artist_hotttnesss-asc","tempo-desc","liveness-desc","artist_hotttnesss-desc","song_hotttnesss-desc","energy-desc"];
+	
+	var randomNumber = Math.floor(Math.random()*sortArray.length);
+
+	var sort = '&sort=' + sortArray[randomNumber];
+
+	var queryString = site + results + min_energy + mood + sort;
 	
 	console.log(queryString);
 	//alert(queryString);
 	
 	callEchoNest(queryString);
 }
+
 
 
 function callEchoNest(website)
@@ -79,8 +87,7 @@ function callEchoNest(website)
         success: function(response, textStatus, jqXHR)
 		{
 		console.log(response);
-		//populateWindow(response);
-		console.log(response.response.songs);
+		generatePlaylist(response);
 		
 		},
         // callback handler that will be called on error
@@ -103,4 +110,48 @@ function callEchoNest(website)
 
 }
 
+function generatePlaylist(response) 
+{
+	var base = 'http://developer.echonest.com/api/v4/playlist/static?api_key=F7R69ENQKKOFBKMBP';
+
+	//get the first song returned from the search
+	var songID = '&song_id=' + response.response.songs[0].id;
+	
+	var format = '&format=json';
+
+	var results = '&results=10';
+
+	var type = '&type=song-radio';
+
+	var queryString = base + songID + format + results + type;
+
+	$.ajax({
+	    url: queryString,
+	    type: "get",
+	    // callback handler that will be called on success
+	    success: function(response, textStatus, jqXHR)
+		{
+			console.log(response);
+			populateWindow(response);
+		},
+	    // callback handler that will be called on error
+	    error: function(jqXHR, textStatus, errorThrown){
+	        // log the error to the console
+	        console.log(
+	            "The following error occured: "+
+	            textStatus, errorThrown
+	        );
+	    },
+	    // callback handler that will be called on completion
+	    // which means, either on success or error
+	    complete: function()
+		{
+	        // enable the inputs
+	     //   $inputs.removeAttr("disabled");
+	    }
+    });
+
+}
+
 //http://developer.echonest.com/api/v4/song/search?api_key=F7R69ENQKKOFBKMBP&format=json&results=10&min_tempo=180&style=electronic&min_energy=0.8
+//http://developer.echonest.com/api/v4/playlist/static?api_key=F7R69ENQKKOFBKMBP&song_id=SOBNERE12AF72A2678&song_id=SOOAWPE13D71F2D713&format=json&results=10&type=song-radio

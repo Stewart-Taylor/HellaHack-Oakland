@@ -65,6 +65,8 @@ function parse7Digital(response)
 		console.log(songs.title);
 		console.log(track.preview_url);
 		console.log(track.release_image);
+
+		addSongBox(songs.title,songs.artist_name,track.preview_url,track.release_image);
 	}
 	
 	console.log("--FINISH--");
