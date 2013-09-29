@@ -49,8 +49,13 @@
 	
 	?>
 	</div>
-	
-	
+
+	<div id="player">
+		<?php
+		include 'functions/player.php'
+		?>	
+	</div>
+
 	</div>
 	
   </body>
