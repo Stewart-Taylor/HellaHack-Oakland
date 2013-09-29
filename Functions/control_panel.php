@@ -10,6 +10,13 @@
 
 <div id="panel_container">
 
+
+<div id="logo_box">
+<h1>Title</h1>
+</div>
+
+<div class="panel_divider"></div>
+
 <div id="mood_box" class="cp_box">
 
 <div class="cp_box_title"> Mood</div>
@@ -24,6 +31,8 @@
 
 </div>
 
+<div class="panel_divider"></div>
+
 <div id="energy_box" class="cp_box">
 
 <div class="cp_box_title"> Energy</div>
@@ -31,16 +40,23 @@
 
   <script>
   $(function() {
+  
+  val = Math.random();
+  val = val * 100;
+  
+    val2 = Math.random();
+  val2 = val2 * 100;
+  
     // setup master volume
     $( "#slider_energy" ).slider({
-      value: 50,
+      value: val,
       orientation: "horizontal",
       range: "min",
       animate: true
     });
 	
 	    $( "#slider_speach" ).slider({
-      value: 50,
+      value: val2,
       orientation: "horizontal",
       range: "min",
       animate: true
@@ -56,6 +72,8 @@
 </div>
 
 
+<div class="panel_divider"></div>
+
 <div id="speech_box"class="cp_box">
 
 <div class="cp_box_title"> Speech</div>
@@ -64,6 +82,8 @@
 <div id="slider_speach"></div>
 </div>
 </div>
+
+<div class="panel_divider"></div>
 
 <button type="button" id="cp_button" class="construct_button">Construct Query</button>
 

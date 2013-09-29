@@ -81,6 +81,10 @@ function constructQuery()
 	energy = energy / 100;
 	console.log(energy);
 	
+	var speach = $('#slider_speach').slider("option", "value");
+	speach = speach / 100;
+	speach = '&min_speechiness=' + speach
+	
 	min_energy = '&min_energy=' + energy;
 
 	//song_min_hotttnesss = '&song_min_hotttnesss=0.5'
@@ -91,7 +95,7 @@ function constructQuery()
 
 	var sort = '&sort=' + sortArray[randomNumber];
 
-	var queryString = site + results + min_energy + mood + sort;
+	var queryString = site + results + min_energy + mood + speach + sort;
 	
 	console.log(queryString);
 	//alert(queryString);
@@ -151,11 +155,12 @@ function generatePlaylist(response)
 	var queryString = base + songID + format + results + type;
 
 	$.ajax({
-	    url: queryString,
+	    url: "functions/proxy.php?url=" + encodeURIComponent(queryString),
 	    type: "get",
 	    // callback handler that will be called on success
 	    success: function(response, textStatus, jqXHR)
 		{
+		response = $.parseJSON(response);
 			console.log(response);
 			populateWindow(response);
 		},
