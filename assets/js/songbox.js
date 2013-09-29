@@ -23,24 +23,55 @@ function addSongBox(title, artist,audioLink,imageLink)
   
   //console.log(masonry_elms);
   //console.log("msnry" + msnry);
-  
-  
+   title = "Sweet Nothing";
+   artist = "calvin harris";
+   imageLink = "http://www.josepvinaixa.com/blog/wp-content/uploads/2013/04/Calvin-Harris-I-Need-Your-Love-2013-1200x1200-Final-Version.png";
   
     var fragment = document.createDocumentFragment();
-   // for ( var i = 0; i < 3; i++ ) {
-      var elem = getItemElement();
+
+       var elem = getItemElement(title,artist,imageLink);
       fragment.appendChild( elem );
       masonry_elms.push( elem );
-   // }
+
     // prepend elements to container
     container.insertBefore( fragment, container.firstChild );
     // add and lay out newly prepended elements
-    msnry.prepended( masonry_elms );
+   // msnry.prepended( masonry_elms );
+   console.log("here");
+   console.log(container.firstChild);
+   console.log(msnry);
+   console.log("Elem");
+   console.log(elem);
+   
+   console.log(masonry_elms);
+   console.log(msnry.items);
+   msnry.prepended(elem);
+   
+   
 }
 
 
-function getItemElement() {
+function getItemElement( title, artist, imageLink) {
   var elem = document.createElement('div');
+  
+  var n = Math.random();
+  
   elem.className = 'block_song_container';
+  if(n < 0.3)
+  {
+  elem.className = 'block_song_container_small';
+  }
+  
+    if(n > 0.8)
+  {
+  elem.className = 'block_song_container_big';
+  }
+  
+  $(elem).css("background-image", "url(" + imageLink + ")");  
+  
+  $(elem).append( '<div class="block_song_title">' +  title + '</p>' );
+  
+  $(elem).append( '<div class="block_song_artist">' + artist + '</p>' );
+  
   return elem;
 }

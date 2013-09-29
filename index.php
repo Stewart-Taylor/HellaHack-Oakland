@@ -70,12 +70,15 @@
 		<script type="text/javascript" >
 			
 	        var masonry_elms = [];
-			var container = document.querySelector('.js-masonry');
+			var container = document.querySelector('.masonry');
 			console.log(container);
 			var msnry = new Masonry( container, {
-			  columnWidth: 60
+			  columnWidth: 150,
+			  gutter:10
 			});
-		
+			
+			console.log(msnry);
+			
 
 			
 			</script>

@@ -2,6 +2,6 @@
 
 ?>
 
-<div id="song_container" class="js-masonry" >
+<div id="song_container" class="masonry" >
  
 </div> 
