@@ -71,3 +71,10 @@ function parse7Digital(response)
 	
 	console.log("--FINISH--");
 }
+
+function play()
+{
+      var myAudio = $("#myAudio");
+      myAudio.play();
+      alert("played!");
+}

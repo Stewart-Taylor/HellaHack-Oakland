@@ -29,7 +29,7 @@ function addSongBox(title, artist,audioLink,imageLink)
   
     var fragment = document.createDocumentFragment();
 
-       var elem = getItemElement(title,artist,imageLink);
+       var elem = getItemElement(title,artist,imageLink, audioLink);
       fragment.appendChild( elem );
       masonry_elms.push( elem );
 
@@ -51,7 +51,7 @@ function addSongBox(title, artist,audioLink,imageLink)
 }
 
 
-function getItemElement( title, artist, imageLink) {
+function getItemElement( title, artist, imageLink, audioLink) {
   var elem = document.createElement('div');
   
   var n = Math.random();
@@ -72,6 +72,15 @@ function getItemElement( title, artist, imageLink) {
   $(elem).append( '<div class="block_song_title">' +  title + '</p>' );
   
   $(elem).append( '<div class="block_song_artist">' + artist + '</p>' );
+
+  $(elem).on("click", function() {
+      var source = document.getElementById("audioSource");
+      source.src = audioLink;
+      var myAudio = document.getElementById("myAudio");
+      myAudio.load();
+      myAudio.play();
+      
+  })
   
   return elem;
 }
