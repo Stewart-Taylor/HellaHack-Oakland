@@ -22,8 +22,8 @@ function constructQuery()
 	
 	var mood = "happy";
 	
-	
-	
+	var artistFame = "&artist_min_familiarity=" + Math.random();
+	var live = "&min_liveness=" + Math.random();
 	
 	var energy = $('#slider_energy').slider("option", "value");
 	energy = energy / 100;
@@ -33,8 +33,7 @@ function constructQuery()
 	min_energy = '&min_energy=' + energy;
 	
 
-
-	var queryString = site + results + mood + min_energy;
+	var queryString = site + results + mood + min_energy + artistFame;
 	
 	console.log(queryString);
 	//alert(queryString);
@@ -53,7 +52,8 @@ function callEchoNest(website)
         success: function(response, textStatus, jqXHR)
 		{
 		console.log(response);
-		populateWindow(response);
+		//populateWindow(response);
+		console.log(response.response.songs);
         },
         // callback handler that will be called on error
         error: function(jqXHR, textStatus, errorThrown){

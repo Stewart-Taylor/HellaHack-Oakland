@@ -43,12 +43,18 @@
 	?>
 	</div>
 	
-	<div id="songview">
+
+	</div>
+	
+	<div id ="songviewCont">
+	
+		<div id="songview">
 	<?php
 	include 'functions/songview.php';
 	
 	?>
 	</div>
+<<<<<<< HEAD
 
 	<div id="player">
 		<?php
@@ -56,6 +62,8 @@
 		?>	
 	</div>
 
+=======
+>>>>>>> db56225ef47499bd84447ab80b06256dbf6f1bb1
 	</div>
 	
   </body>

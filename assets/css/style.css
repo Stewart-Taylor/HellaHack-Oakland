@@ -1,22 +1,32 @@
 .container
 {
-background-color:#FF0000;
 margin:0px;
 padding:0px;
+overflow:hidden;
+}
+body {}
+
+
+html
+{
+
 }
 
 #control_panel
 {
-background-color:#b0c4de;
-width:15%;
-float:left;
-height:100%;
+background-color:#E8E8E3;
+
+height:200px;
 }
 
 #songview
 {
-float: left;
-width: 85%%;
-background-color:#e0ffff;
 
+
+
+}
+
+#songviewCont
+{
+ margin:20px;
 }
